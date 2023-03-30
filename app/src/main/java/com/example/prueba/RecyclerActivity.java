@@ -3,6 +3,7 @@ package com.example.prueba;
 import static androidx.constraintlayout.motion.utils.Oscillator.TAG;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,6 +13,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListAdapter;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 import android.content.Intent;
 
-public class RecyclerActivity extends AppCompatActivity implements RecycleInterface.RecycleViewOnClick {
+public class RecyclerActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
 
@@ -107,12 +109,28 @@ public class RecyclerActivity extends AppCompatActivity implements RecycleInterf
     }
 
     @Override
-    public void onItemClick(int position) {
+    public void onBackPressed() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Advertencia");
+        builder.setMessage("¿Desea volver hacia atrás?");
+
+        builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                salir();
+            }
+        });
+        builder.setNegativeButton("Cancelar", null);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
 
     }
 
-    @Override
-    public void onItemLongClick(int position) {
+    private void salir() {
+
+        super.onBackPressed();
 
     }
 }

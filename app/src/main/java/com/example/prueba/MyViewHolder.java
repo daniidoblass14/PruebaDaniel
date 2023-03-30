@@ -11,7 +11,6 @@ public class MyViewHolder extends RecyclerView.ViewHolder{
     public TextView tvNombre, tvFecha;
     public ImageView imageView;
     public CardView cardView;
-    private RecycleInterface.RecycleViewOnClick recycleViewOnClick;
 
     public MyViewHolder(View itemView) {
         super(itemView);
@@ -20,11 +19,5 @@ public class MyViewHolder extends RecyclerView.ViewHolder{
         imageView = itemView.findViewById(R.id.imageView);
         cardView = itemView.findViewById(R.id.cardView);
 
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                recycleViewOnClick.onItemClick(getAdapterPosition());
-            }
-        });
     }
 }

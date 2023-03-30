@@ -13,8 +13,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
     private List<MyData> mDataList;
 
-    private RecycleInterface.RecycleViewOnClick recycleViewOnClick;
-
     private onItemClick onClick;
     private onItemLongClick onLongClick;
 
@@ -26,10 +24,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>{
         void onItemLongClick(MyData data);
     }
 
-    public MyAdapter(List<MyData> mDataList, RecycleInterface.RecycleViewOnClick recycleViewOnClick) {
-        this.mDataList = mDataList;
-        this.recycleViewOnClick = recycleViewOnClick;
-    }
 
     public MyAdapter(List<MyData> dataList){
         mDataList = dataList;
