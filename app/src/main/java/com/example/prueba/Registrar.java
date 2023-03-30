@@ -51,7 +51,6 @@ public class Registrar extends AppCompatActivity implements View.OnClickListener
     private Button btnCamara, btnGaleria, btnRegistrar;
     private TextInputLayout textFecha, textNombre, textPassWord;
     private TextInputEditText fechaEditText, nombreEditText, passwordEditText;
-    private String fechaBaseDatos;
     private ImageView imageView;
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -101,7 +100,9 @@ public class Registrar extends AppCompatActivity implements View.OnClickListener
         fechaEditText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                materialDatePicker.show(getSupportFragmentManager(), "tag");
+                if (!materialDatePicker.isAdded()) {
+                    materialDatePicker.show(getSupportFragmentManager(), "tag");
+                }
             }
         });
 

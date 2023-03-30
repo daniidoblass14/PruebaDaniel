@@ -1,5 +1,6 @@
 package com.example.prueba;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,6 +42,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>{
         holder.tvNombre .setText(data.getNombre());
         holder.tvFecha .setText(data.getFecha());
         holder.imageView.setImageBitmap(data.getImageBitmap());
+
+        // Cambiar el color de fondo dependiendo de la posición
+        if (position % 2 == 0) {
+            holder.itemView.setBackgroundColor(Color.RED);
+        } else {
+            holder.itemView.setBackgroundColor(Color.BLUE);
+        }
+
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

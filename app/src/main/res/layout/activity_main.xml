@@ -96,10 +96,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_height="150dp"
-            android:layout_width="100dp"
+            android:layout_width="175dp"
             android:padding="10dip"
             android:scaleType="fitCenter"
-            app:riv_oval="false"
+            app:riv_oval="true"
+            app:riv_corner_radius="80dp"
+            app:riv_border_color="@color/black"
+            app:riv_border_width="4dp"
             android:src="@mipmap/imagen_perfil"
             />
 

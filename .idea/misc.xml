@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Dev/ProyectoGit/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.185" />
         <entry key="..\:/Dev/ProyectoGit/app/src/main/res/drawable/ic_baseline_photo_24.xml" value="0.203" />
         <entry key="..\:/Dev/ProyectoGit/app/src/main/res/drawable/ic_launcher_background.xml" value="0.203" />
+        <entry key="..\:/Dev/ProyectoGit/app/src/main/res/drawable/ic_notifacion.xml" value="0.2055" />
+        <entry key="..\:/Dev/ProyectoGit/app/src/main/res/drawable/ic_notification.xml" value="0.1925" />
         <entry key="..\:/Dev/ProyectoGit/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Dev/ProyectoGit/app/src/main/res/layout/recy_layout.xml" value="0.20364583333333333" />
         <entry key="..\:/Dev/ProyectoGit/app/src/main/res/layout/recycler_layout.xml" value="0.20364583333333333" />
